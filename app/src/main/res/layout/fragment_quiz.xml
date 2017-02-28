@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/quiz"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorBack"
+              android:orientation="vertical"
+              tools:context="com.nico.quiz.QuizFragment">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/colorTop1"
+        android:columnCount="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/points"
+            style="@style/AlertDialog.AppCompat.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginLeft="@dimen/margin_quiz"
+            android:layout_marginStart="@dimen/margin_quiz"
+            android:layout_row="0"
+            android:padding="@dimen/padding_quiz"
+            android:text="@string/ponts"
+            android:textSize="@dimen/text_size"/>
+        <TextView
+            android:id="@+id/points_count"
+            android:layout_width="0dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_marginLeft="@dimen/margin_quiz2"
+            android:layout_marginStart="@dimen/margin_quiz2"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_quiz"
+            android:textSize="@dimen/text_size"
+            />
+
+        <TextView
+            android:id="@+id/rate"
+            style="@style/AlertDialog.AppCompat.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_row="0"
+            android:padding="6dp"
+            android:text="@string/rate"
+            android:textSize="@dimen/text_size"/>
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/colorTop2"
+        android:columnCount="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/levels"
+            style="@style/AlertDialog.AppCompat.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_row="0"
+            android:padding="6dp"
+            android:text="@string/Lives"
+            android:textSize="@dimen/text_size"/>
+        <TextView
+            android:id="@+id/lives_count"
+            android:layout_width="0dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_marginLeft="@dimen/margin_quiz2"
+            android:layout_marginStart="@dimen/margin_quiz2"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_quiz"
+            android:textSize="@dimen/text_size"
+            />
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/rate_img"
+            android:layout_width="80dp"
+            android:layout_height="34dp"
+            android:layout_column="1"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_row="0"
+            android:padding="6dp"
+            android:src="@drawable/medals"
+            android:text="@string/rate"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AlertDialog.AppCompat.Light"
+            android:text="@string/choose_excess_image1"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AlertDialog.AppCompat.Light"
+            android:text="@string/choose_excess_image2"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <!--Images-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:columnCount="2"
+        android:horizontalSpacing="10dp"
+        android:orientation="vertical"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:gravity="center">
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/img1"
+                style="@style/image"
+                android:layout_width="177dp"
+                android:layout_height="139dp"
+                android:layout_margin="4dp"/>
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/img2"
+                style="@style/image"
+                android:layout_width="177dp"
+                android:layout_height="139dp"
+                android:layout_margin="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:gravity="center">
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/img3"
+                style="@style/image"
+                android:layout_width="177dp"
+                android:layout_height="139dp"
+                android:layout_margin="4dp"/>
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/img4"
+                style="@style/image"
+                android:layout_width="177dp"
+                android:layout_height="139dp"
+                android:layout_margin="4dp"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+</LinearLayout>
