@@ -21,7 +21,7 @@ public class Data
     public static String desc_win; // разгадка
     public static String answer; // число ответа
 
-    public final String[] rightAnswers = new String[]{
+    public final static String[] rightAnswers = new String[]{
             "Правильно!",
             "Абсолютно верно!",
             "Восхитительно!",

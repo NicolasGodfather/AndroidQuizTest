@@ -6,6 +6,9 @@
     <string name="ponts">Очки: </string>
     <string name="Lives">Жизни: </string>
     <string name="rate">Рейтинг</string>
-    <string name="choose_excess_image1">Выберите лишнюю </string>
-    <string name="choose_excess_image2">картинку </string>
+    <string name="choose_excess_image1">Выберите лишнюю картинку</string>
+    <string name="choose_wrong">Не верно</string>
+
+    <string name="result_dialog">Следующий уровень</string>
+    <string name="next_level">Следующий уровень</string>
 </resources>
