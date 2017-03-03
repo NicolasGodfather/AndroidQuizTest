@@ -3,6 +3,7 @@ package com.nico.quiz.dialogs;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -18,20 +19,20 @@ import com.nico.quiz.R;
 
 public class NextLevelDialog extends Dialog implements View.OnClickListener
 {
-    public Activity c;
-    public Button button_next_level;
-    public TextView titleText, answerText;
-    public String title, answer;
-    public ImageView imageView;
-    public int imgId;
+    private Activity c;
+    private Button button_next_level;
+    private TextView titleText, answerText;
+    private String title, answer;
+    private ImageView imageView;
+    private Drawable drawable;
 
-    public NextLevelDialog(Context context, Activity c, String title, String answer, int imgId)
+    public NextLevelDialog(Context context, Activity c, String title, String answer, Drawable drawable)
     {
         super(context);
         this.c = c;
         this.title = title;
         this.answer = answer;
-        this.imgId = imgId;
+        this.drawable = drawable;
     }
 
     @Override
@@ -48,7 +49,7 @@ public class NextLevelDialog extends Dialog implements View.OnClickListener
 
         titleText.setText(title);
         answerText.setText(answer);
-        imageView.setImageResource(imgId);
+        imageView.setImageDrawable(drawable);
     }
 
     @Override

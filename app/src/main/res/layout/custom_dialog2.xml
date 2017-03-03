@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="360dp"
+                android:layout_height="500dp"
+                android:background="@color/colorBack"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5dp">
+
+    <TextView
+        android:id="@+id/text_your_lives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/your_lives"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/text_game_over"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/text_game_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/game_over"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/close_btn"
+        style="@style/dialog_buton"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:text="@string/close"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/restore_btn"
+        style="@style/dialog_buton_circle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="@string/restore"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/close_btn"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
