@@ -28,7 +28,7 @@ import java.text.NumberFormat;
 import static com.nico.quiz.Data.gameData;
 import static java.lang.String.valueOf;
 
-public class QuizFragment extends Fragment /*implements StateData*/ /*implements QuizFragment.StateListener*/
+public class QuizFragment extends Fragment
 {
     private static final String TAG = "Quiz Fragment";
     private static final NumberFormat numberFormat = NumberFormat.getIntegerInstance();
@@ -42,6 +42,7 @@ public class QuizFragment extends Fragment /*implements StateData*/ /*implements
     protected TextView countPoints;
     protected TextView countLives;
     private TextView titleText;
+    private ImageView imageRating;
     private ImageView[] images;
     private AdView adView;
     private AdRequest adRequest;
@@ -56,54 +57,6 @@ public class QuizFragment extends Fragment /*implements StateData*/ /*implements
     }
 
 
-   /* @Override
-    public void checkPoints(int points)
-    {
-        countPoints.setText(String.valueOf(points));
-    }
-
-    @Override
-    public void checkLives(int lives)
-    {
-        countLives.setText(String.valueOf(lives));
-    }
-
-
-
-    @Override
-    public void onAttach(Activity activity)
-    {
-        super.onAttach(activity);
-        try
-        {
-            stateListener = (StateListener) activity;
-        } catch (ClassCastException e)
-        {
-            throw new ClassCastException(activity.toString() + " must implement OnItemClickedListener");
-        }
-    }*/
-
-    @Override
-    public void onSaveInstanceState(Bundle outState)
-    {
-        super.onSaveInstanceState(outState);
-
-        editor.putInt("lives", totalLives);
-        editor.putInt("points", totalPoints);
-        editor.putInt("level", i);
-        editor.commit();
-    }
-/*
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState)
-    {
-        super.onViewStateRestored(savedInstanceState);
-
-        totalLives = sharedPreferences.getInt("lives", 0);
-        totalPoints = sharedPreferences.getInt("points", 0);
-        i = sharedPreferences.getInt("level", 0);
-    }*/
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
@@ -111,6 +64,7 @@ public class QuizFragment extends Fragment /*implements StateData*/ /*implements
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_quiz, container, false);
 
+        // слушает изменения жизней и очков
         this.setStateListener(new StateData()
         {
             @Override
@@ -162,6 +116,16 @@ public class QuizFragment extends Fragment /*implements StateData*/ /*implements
 
         loadGame();
         return view;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState)
+    {
+        super.onSaveInstanceState(outState);
+        editor.putInt("lives", totalLives);
+        editor.putInt("points", totalPoints);
+        editor.putInt("level", i);
+        editor.commit();
     }
 
     // Загрузка игры
@@ -226,6 +190,7 @@ public class QuizFragment extends Fragment /*implements StateData*/ /*implements
                     public void onTick(long millisUntilFinished)
                     {
                     }
+
                     public void onFinish()
                     {
                         loadGame();
@@ -280,14 +245,4 @@ public class QuizFragment extends Fragment /*implements StateData*/ /*implements
             }
         }
     };
-/*
-    @Override
-    public void checkPoints(int points)
-    {
-    }
-
-    @Override
-    public void checkLives(int lives)
-    {
-    }*/
 }

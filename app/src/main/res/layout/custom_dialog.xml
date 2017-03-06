@@ -14,6 +14,7 @@
         android:layout_above="@+id/btn_next"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
+        android:gravity="center"
         android:layout_marginBottom="26dp"
         android:text="message_dialog_answer"
         android:textColor="@android:color/white"

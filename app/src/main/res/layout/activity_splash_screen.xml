@@ -11,4 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/quiz_wallpapers"/>
+
+    <Button
+        android:id="@+id/btn_start"
+        style="@style/dialog_buton"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="45dp"
+        android:clickable="true"
+        android:text="@string/start"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
